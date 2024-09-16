@@ -1,9 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
-test('register', async ({ page }) => {
+test('login', async ({ page }) => {
 
     await page.goto('https://automationexercise.com/');
-    expect (page)
     await page.locator('[href="/login"]').click();
     await page.locator('[data-qa="login-email"]').fill('shubhamvkjain1@gmail.com');
     await page.getByPlaceholder('Password').fill('mastershubham');
