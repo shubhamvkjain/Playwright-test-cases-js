@@ -1,13 +1,13 @@
 
 const { test, expect } = require('@playwright/test');
 
-test('has title', async ({ page }) => {
+test('register', async ({ page }) => {
     await page.goto('https://automationexercise.com/');
     expect(page.locator('[alt="Website for automation practice"]')).toBeVisible();
     await page.locator('[href="/login"]').click();
     expect(page.getByText('New User Signup!')).toBeVisible();
     await page.getByPlaceholder('Name').fill('Shubham Jain');
-    await page.locator('[data-qa="signup-email"]').fill('shubhamvkjain721111@gmail.com');
+    await page.locator('[data-qa="signup-email"]').fill('shubhamvkjain7211111@gmail.com');
     await page.locator('[data-qa="signup-button"]').click();
     expect(page.getByText('Enter Account Information')).toBeVisible();
     await page.locator('#id_gender1').check();
