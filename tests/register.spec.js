@@ -7,7 +7,7 @@ test('register', async ({ page }) => {
     await page.locator('[href="/login"]').click();
     expect(page.getByText('New User Signup!')).toBeVisible();
     await page.getByPlaceholder('Name').fill('Shubham Jain');
-    await page.locator('[data-qa="signup-email"]').fill('shubhamvkjain53@gmail.com');
+    await page.locator('[data-qa="signup-email"]').fill('shubhamvkjain536@gmail.com');
     await page.locator('[data-qa="signup-button"]').click();
     expect(page.getByText('Enter Account Information')).toBeVisible();
     await page.locator('#id_gender1').check();
